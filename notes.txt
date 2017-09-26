@@ -1,0 +1,166 @@
+AngularJS
+1.x
+angularjs.org
+
+Angular
+2.x
+4.x
+
+angular.io
+
+1.We can develop rich cliient Web Application
+2.We can develop SPA(Single page Application)
+3.It easy to develop and more interactive
+
+PreQuirements:
+1.Html (Hypertext Markup Language)Html5
+2.Css (CasCading Style sheet)Css3
+3.Javascript 
+4.Server side scripting
+	a.Asp.net
+	b.Java EE
+	c.PHP
+5.Ajax
+
+Reference sites:
+www.W3schools
+www.tutorialpoint
+www.javatpoint
+
+Node.js
+
+Angular:ECMA(Euorpian Computer manfacturer Association)ES6 oops
+Angular is fully developed using Typescript language
+
+Typescript:
+Typescript is super set of Javascript
+
+Typescript is intriduced Google engineer Anders
+ typescript is not by browser
+ 
+ Javascript Netscape navigator with in 3 weeks
+ IE -->Google
+ 
+ Ex: gmail
+ 
+ Software:
+ 1.Node js npm(Node Package manager)
+ 2.Visual Studio Code
+ 3.Github or mail
+ 4.typescript
+ 
+ 
+ AngularJS
+1.Library
+2.Modular programming concept(74 Directive)
+3.No Typescript
+4.Controller+scope
+5.Nocamelcase in directive name Ex:ng-app,ng-model
+6.DependencyInjection(Controller)
+
+
+
+Angular(Es6)
+1.Framework
+2.Component based concept
+3.Angular fully developed using typescript.ts
+4.Component +directive
+5.Camelcase directive Ex:ngModel
+6.DependencyInjection(Constructor)
+ 
+
+Typescript: playground
+
+Angular
+1.Online- Plunker
+2.Offline-
+	a. Quickstart seed
+		1.Direct download-npm install then npm start
+		2.Git clone-npm install then npm start
+	b. Angular CLI(Command Line Interface)
+
+A framework for designing web applications-Angular(Single Page Application)
+
+Component:
+
+1. direct copy paste
+	1. create component
+	2. create html and css file
+	3. include component in app.module.ts and declaration and bootstrap the component.
+	4. change the selector in index.html
+
+2. CLI command-ng g c comp_name
+
+AOT and JIT compiler commpiles typescript.
+------------------------------------------------------------------------------------------------------------------------
+ng g c course --flat
+
+Data Binding
+To communicate Component to DOM
+1.String Interpolation Operator Ex:{{name}}
+2.Property Binding Ex:<button [disabled]="false or exp">Some text</button>
+3.Event binding Ex:<button (click)="addTopic()">AddTopic</button>
+4.Two-way Dtatbinding Ex:<input [(ngModel)]="Exp or name"/>
+
+Directive:
+1.Builtin Directives
+	a.Structural Directives
+		1.ngIf
+		2.ngFor
+		3.ngSwitch
+	b.Attribute Directives
+		1.ngClass
+		2.ngStyle
+		3.ngModel
+2.Custom Directives
+	1.Custom Attrubute Directive Ex:"Srinivas"
+	2.Custom Structural Directive Ex:unless
+	
+	Step:
+	1.Create Custom Directive using Cli ng g d attrHighlight
+	2.Write Functionality and include which component you want.
+	3.include custom directive in app.module.ts
+	4.Take tag use it in html page
+	
+Custom Pipe:
+Cli
+ng g p pipename
+
+ng g p custBrackets
+Ex:
+{{"Srinivas" | brackets:k}}
+
+[Srinivas]
+[SRINIVAS]
+[srinivas]
+[Srinivas]
+
+Custom Pipe Step
+1.Create a custom pipe using cli ng g p brackets
+2.Take name from pipe and use the same name in which component
+3.Check pipe and custom pipe is included in app.module.ts or not
+4.Include custom pipe in which component you want to use
+====================
+RecipeBook
+
+recipe
+Recipe List
+recipe Detail
+Shoping
+
+
+HeaderComponent
+RecipeList Component
+Recipe Detail Component
+Shoping Component
+notfound component
+login Component
+Register Component
+app component
+
+myunless
+appMyunless
+
+article
+article
+rbarticle
