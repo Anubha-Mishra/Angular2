@@ -92,6 +92,8 @@ Component:
 2. CLI command-ng g c comp_name
 
 AOT and JIT compiler commpiles typescript.
+
+Template reference variable for reading input value with prefix "#" E.g. #topic
 ------------------------------------------------------------------------------------------------------------------------
 ng g c course --flat
 
