@@ -1,5 +1,16 @@
 <div>
     <h1>
-        Course name {{name}}!
+        Course name {{name}}!<!--interpolation operator-->
     </h1>
 </div>
+<h3>Course Topics:</h3>
+<ol>
+    <!--<li>{{topics}}</li> without directive-->
+    <li *ngFor="let t of topics">{{t}}</li><!--ngFor is directive-->
+</ol>
+<br>
+Add New Topic : <input type="text" name="topic" #topic>
+<!--To read this input value we need template reference variable i.e. #topic-->
+<button value="addtopic" (click)="addTopic(topic.value)">Add Topic</button>
+<!--click is event and addTopic is handler and this process is event binding-->
+<button value="cleartopic" (click)="clearTopic()">Clear Topic</button>
