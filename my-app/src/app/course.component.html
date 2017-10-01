@@ -1,19 +1,27 @@
-<div>
+<div >
     <h1>
-        Course name {{name}}!<!--interpolation operator-->
+      Course Name: {{name}}
     </h1>
+    <h3>Amount:{{amount}}</h3>
 </div>
+<div [hidden]=true>How are you property binding</div>
+<div *ngIf=false>How are you ng if</div>
 <h3>Course Topics:</h3>
-<ol>
-    <!--<li>{{topics}}</li> without directive-->
-    <li *ngFor="let t of topics">{{t}}</li><!--ngFor is directive-->
-</ol>
+<ul>
+    <li *ngFor="let t of topics">{{t}}</li>  
+     
+</ul>
 <br>
-Add New Topic : <input type="text" name="topic" #topic>
-<!--To read this input value we need template reference variable i.e. #topic-->
-<button value="addtopic" (click)="addTopic(topic.value)">Add Topic</button>
-<!--click is event and addTopic is handler and this process is event binding-->
-<button value="cleartopic" (click)="clearTopic()">Clear Topic</button>
-<br>
-<!--Adding another component-->
-<app-course1></app-course1>
+New Topic <br/>
+<input type="text" #topic>
+<br/>
+<button (click)="addTopic(topic.value)">Add Topic </button>
+<button name="cleartopic" (click)="clearTopic()">Clear Topic</button>
+
+<br><br>
+<input type="text" name="fname" [(ngModel)]="fname"/>
+<input type="text" name="fname" [(ngModel)]="fname"/>
+<br><br>
+{{fname}}
+
+

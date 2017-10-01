@@ -1,0 +1,27 @@
+<h1>Interest Calculation</h1>
+Amount:<input type="text" [(ngModel)]="amount"><br>
+Rate:<input type="text" [(ngModel)]="rate"><br>
+Term:<input type="text" [(ngModel)]="term"><br>
+
+<br>
+<p *ngIf="amount>0 && rate>0 && term>0">Interest={{amount*rate*term/100}}</p>
+<button (click)="clearAll()">Clear All</button>
+<br>
+<br>
+<div [ngClass]="myclass">Some attribute Directive content</div>
+
+<p [ngStyle]="{'color':'red','padding':'10px','border':'3px solid green'}">Here some content Dumment fhmjhkjhnkj
+    dfffghhjhjkkjkjlkllkghmhbjnmk
+
+    hgfghbvhbjkhtrytrertsd
+</p>
+<input type="text" [(ngModel)]="fname"/>
+<input type="text" [(ngModel)]="fname"/>
+<p>{{fname}}</p>
+
+<br><br>
+<div *ngIf="false">HiSrinivas</div>
+
+<div [ngClass]="twowaybinding">Angular training</div>
+<input type="checkbox" [(ngModel)]="twowaybinding.big"/>Big
+<input type="checkbox" [(ngModel)]="twowaybinding.green"/>GreenColor

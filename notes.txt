@@ -102,7 +102,7 @@ To communicate Component to DOM
 1.String Interpolation Operator Ex:{{name}}
 2.Property Binding Ex:<button [disabled]="false or exp">Some text</button>
 3.Event binding Ex:<button (click)="addTopic()">AddTopic</button>
-4.Two-way Dtatbinding Ex:<input [(ngModel)]="Exp or name"/>
+4.Two-way Databinding Ex:<input [(ngModel)]="Exp or name"/>
 
 Directive:
 1.Builtin Directives
@@ -124,6 +124,19 @@ Directive:
 	3.include custom directive in app.module.ts
 	4.Take tag use it in html page
 	
+Directives:
+Do some additional features
+2 types
+1.Built in Directives
+	1.Attribute Directives 
+		a.ngClass Ex:<div [ngClass]="myclass">Some Context</div>
+		b.ngStyle Ex:<p [ngStyle]="{'color':'green'}">Here text textchhjgjhjhgkmjhbgkjhjbkbkj</p>
+		c.ngModel -- Ex:<input [(ngModel)]="Exp">
+	2.Structural Directives
+		a.*ngIf Ex:<div *ngIf="true">HiSrinivas</div>
+		b.*ngFor
+		c.*ngSwitch
+		
 Custom Pipe:
 Cli
 ng g p pipename
