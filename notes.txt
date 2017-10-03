@@ -1,3 +1,15 @@
+Angular
+1.Online
+	Plunker
+2.Offline(Local)
+	1.Quickstart seed
+		a.Direct download
+		b.Git Clone
+		https://v2.angular.io/docs/ts/latest/guide/setup.html
+	2.Angular CLI(Commandline interface)
+	https://v2.angular.io/docs/ts/latest/cli-quickstart.html
+
+
 AngularJS
 1.x
 angularjs.org
@@ -134,7 +146,7 @@ Do some additional features
 		c.ngModel -- Ex:<input [(ngModel)]="Exp">
 	2.Structural Directives
 		a.*ngIf Ex:<div *ngIf="true">HiSrinivas</div>
-		b.*ngFor
+		b.*ngFor Ex:<div *ngFor="let name of names; let i=index">{{i+1}} => {{name}}</div>
 		c.*ngSwitch
 		
 Custom Pipe:
