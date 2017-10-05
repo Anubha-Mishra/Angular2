@@ -9,6 +9,10 @@ export class InterestComponent implements OnInit {
   amount:number =0;
   rate:number=0;
   term:number=0;
+  names:string[]=["Srinivas","Nihil","Ankut","Abc","raghu"];
+  mode:string='t';
+  flight:string="Indigo";  
+  train:string="Ap Express";
   myclass={"big":true,'red':true}
   clearAll():void{
     this.amount=0;
@@ -20,5 +24,5 @@ export class InterestComponent implements OnInit {
 
   ngOnInit() {
   }
-
+ 
 }

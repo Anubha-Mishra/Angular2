@@ -1,10 +1,15 @@
-import { Directive } from '@angular/core';
+import { Directive,ElementRef,Renderer } from '@angular/core';
 
 @Directive({
-  selector: '[appAttrHighlight]'
+  selector: '[appAttrhighlight]'
 })
-export class AttrHighlightDirective {
+export class AttrhighlightDirective {
 
-  constructor() { }
+  constructor(private elementRef:ElementRef,private renderer:Renderer) {
+    //this.elementRef.nativeElement.style.backgroundColor="green";
+    renderer.setElementStyle(this.elementRef.nativeElement,'backgroundColor','green')
+    
+   }
+ 
 
 }
