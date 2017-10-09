@@ -4,8 +4,10 @@ Amount:<input type="text" [(ngModel)]="amount"><br> Rate:
 <input type="text" [(ngModel)]="term"><br>
 
 <br>
-<p *ngIf="amount>0 && rate>0 && term>0">Interest={{amount*rate*term/100}}</p>
+<p *ngIf="amount>0 && rate>0 && term>0">Interest={{amount*rate*term/100 | currency:'INR'}}</p>
 <button (click)="clearAll()">Clear All</button>
+
+<div>{{ birthday | date: "dd/mm/yy"}} {{ birthday | date | uppercase}} {{ birthday | date:'hh:mm:ss'}}</div>
 <br>
 <br>
 <div [ngClass]="myclass">Some attribute Directive content</div>
@@ -19,11 +21,13 @@ Amount:<input type="text" [(ngModel)]="amount"><br> Rate:
 <br><br>
 <div *ngIf="false">HiSrinivas</div>
 <div *ngIf="true">True Srinivas</div>
-<div *ngIf="true">HiSrinivas true
-    <div>Srini</div>
-    <div>Srini</div>
-</div>
-<div appStrifopposite>HiSrinivas true</div>
+
+<h2>NgIf</h2>
+<div *ngIf="true">HiSrinivas ng if true</div>
+<div *ngIf="switch">HiSrinivas ng if true</div>
+<button (click)="onSwitch()">Switch</button>
+<h2>Structural Custom Directive</h2>
+<div *appUnless="switch">HiSrinivas structural directive true</div>
 
 <div [ngClass]="twowaybinding">Angular training</div>
 <input type="checkbox" [(ngModel)]="twowaybinding.big" />Big

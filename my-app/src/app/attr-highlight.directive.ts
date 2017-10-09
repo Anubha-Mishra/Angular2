@@ -5,11 +5,8 @@ import { Directive,ElementRef,Renderer } from '@angular/core';
 })
 export class AttrhighlightDirective {
 
-  constructor(private elementRef:ElementRef,private renderer:Renderer) {
+  constructor(private elementRef:ElementRef,private renderer:Renderer) {//Dependency Injection
     //this.elementRef.nativeElement.style.backgroundColor="green";
-    renderer.setElementStyle(this.elementRef.nativeElement,'backgroundColor','green')
-    
+    renderer.setElementStyle(this.elementRef.nativeElement,'backgroundColor','green');//renderer module    
    }
- 
-
 }

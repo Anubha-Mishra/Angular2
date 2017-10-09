@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./interest.component.css']
 })
 export class InterestComponent implements OnInit {
+  birthday:Date= new Date();
   amount:number =0;
   rate:number=0;
   term:number=0;
@@ -18,6 +19,10 @@ export class InterestComponent implements OnInit {
     this.amount=0;
     this.rate=0;
     this.term=0;
+  }
+  switch:boolean=true;
+  onSwitch():void{
+    this.switch=!this.switch;
   }
   twowaybinding={"big":true,'green':false}
   constructor() { }
