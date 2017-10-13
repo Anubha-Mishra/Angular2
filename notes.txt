@@ -149,12 +149,12 @@ Do some additional features
 		b.*ngFor Ex:<div *ngFor="let name of names; let i=index">{{i+1}} => {{name}}</div>
 		c.*ngSwitch
 		
-Custom Pipe:
+Custom Pipe: Formatting purpose we use pipes.
 Cli
 ng g p pipename
 
-ng g p custBrackets
 Ex:
+ng g p custBrackets
 {{"Srinivas" | brackets:k}}
 
 [Srinivas]
@@ -191,3 +191,5 @@ appMyunless
 article
 article
 rbarticle
+
+Class creation: ng g cl classname
