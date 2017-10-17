@@ -92,8 +92,9 @@ Angular
 	b. Angular CLI(Command Line Interface)
 
 A framework for designing web applications-Angular(Single Page Application)
+-----------------------------------------------------------------------------------------------------------------------
 
-Component:
+Component: ng g c course --flat
 
 1. direct copy paste
 	1. create component
@@ -107,7 +108,6 @@ AOT and JIT compiler commpiles typescript.
 
 Template reference variable for reading input value with prefix "#" E.g. #topic
 ------------------------------------------------------------------------------------------------------------------------
-ng g c course --flat
 
 Data Binding
 To communicate Component to DOM
@@ -115,8 +115,10 @@ To communicate Component to DOM
 2.Property Binding Ex:<button [disabled]="false or exp">Some text</button>
 3.Event binding Ex:<button (click)="addTopic()">AddTopic</button>
 4.Two-way Databinding Ex:<input [(ngModel)]="Exp or name"/>
+------------------------------------------------------------------------------------------------------------------------
 
-Directive:
+Directive: ng g d directive_name
+
 1.Builtin Directives
 	a.Structural Directives
 		1.ngIf
@@ -148,6 +150,7 @@ Do some additional features
 		a.*ngIf Ex:<div *ngIf="true">HiSrinivas</div>
 		b.*ngFor Ex:<div *ngFor="let name of names; let i=index">{{i+1}} => {{name}}</div>
 		c.*ngSwitch
+----------------------------------------------------------------------------------------------------------------------------
 		
 Custom Pipe: Formatting purpose we use pipes.
 Cli
@@ -167,7 +170,29 @@ Custom Pipe Step
 2.Take name from pipe and use the same name in which component
 3.Check pipe and custom pipe is included in app.module.ts or not
 4.Include custom pipe in which component you want to use
-====================
+-----------------------------------------------------------------------------------------------------------------------------
+
+Class creation: ng g cl classname
+-----------------------------------------------------------------------------------------------------------------------------
+
+Service: ng g s log in userlog
+1. Injectable decrator is used to create service
+2. Import the service in component of userlog
+3. In component decorator use one more property as providers
+4. providers:[LogService]
+5. To communicate between service and component we use dependency injection: take LogService data to logService property.
+------------------------------------------------------------------------------------------------------------------------------
+
+Forms :
+1. Template Driven form : ng g c login (More HTML and less model code)
+2. Module Driven form : ng g c login (More model and less html code)
+
+a. ngSubmit is called on submit of form
+b. Module Driven form also known as Reactive forms
+c. Import FormGroup, FormBuilder, Validators, ReactiveFormModule in app.module.ts.
+d. Using formid we use to show filed values. Ex: this.loginForm.controls["username"].value.
+------------------------------------------------------------------------------------------------------------------------------
+
 RecipeBook
 
 recipe
@@ -191,5 +216,4 @@ appMyunless
 article
 article
 rbarticle
-
-Class creation: ng g cl classname
+-----------------------------------------------------------------------------------------------------------------------------------------
