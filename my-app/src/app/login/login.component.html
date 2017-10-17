@@ -1,0 +1,25 @@
+<div>
+  <h2>Template Driven Form</h2>
+  <form (ngSubmit)="onSubmit()" name="loginForm" #loginForm="ngForm">
+
+    <label for="uname">Username </label> <br>
+    <input type="text" id="uname" #uname="ngModel" [(ngModel)]="username" name="username" minlength="4" required>
+    <span *ngIf="uname.dirty && uname.invalid">
+              <span  *ngIf="uname.errors.required"  class="error" >Username is required!</span>
+              <span *ngIf="uname.errors.minlength" class="error">Minimum of 4 char required!</span>
+    </span>
+
+    <p></p>
+    <label for="pwd">Password </label> <br>
+    <input type="password" id="pwd" [(ngModel)]="password" #pwd="ngModel" name="password" required>
+    <span *ngIf="pwd.dirty && pwd.invalid" class="error">Password is required!</span>
+    <p></p>
+    <button [disabled]="!loginForm.form.valid">Login</button>
+  </form>
+</div>
+
+
+<app-reactive></app-reactive>
+
+<br>
+<app-cart></app-cart>

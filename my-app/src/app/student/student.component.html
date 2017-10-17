@@ -1,0 +1,39 @@
+
+<html>
+  
+  <body>
+    <h2>Student Details</h2>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="col-md-4 form-group">
+          <label for="roll_no">Roll No.</label>
+          <input type="text" id="roll_no" required class="form-control" name="Snumber">
+        </div>
+        <div class="col-md-4 form-group">
+          <label for="marks">Marks</label>
+          <input type="text" id="marks" required class="form-control"  name="Smarks">
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-success" type="submit" (click)="addStudent()">Add</button>
+        </div>
+      </div>
+    </div>
+    <table border="1" *ngIf="students.length > 0" style="border-collapse: collapse  ">
+      <tr>     
+        <th>Roll No.</th>
+        <th>Marks</th>
+        <th></th>
+      </tr>
+      <tr *ngFor="let student of students">
+        
+        <td> {{ student.id }}</td>
+        <td> {{ student.marks }}</td>
+        <td>
+          <input class="btn btn-primary" type="button" (click)="editStudent(student.id)" value="Edit" />
+          <input class="btn btn-danger" type="button" (click)="deleteStudent(student.id)" value="Delete" />  
+        </td>
+      </tr>
+    </table>
+  </body>
+  
+  </html>

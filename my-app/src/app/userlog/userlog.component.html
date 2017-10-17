@@ -1,0 +1,11 @@
+<html>
+  <head>
+    <title>UserLog</title>
+  </head>
+  <body>
+    <h3>UserLog Component</h3>
+    <input type="text"  #message/><br><br>
+    <button (click)="logMessage(message.value)">LogInfo</button>
+    <button (click)="logError(message.value)">LogError</button>
+  </body>
+</html>
