@@ -1,0 +1,26 @@
+<html>
+  
+  <head>
+      <title>Books</title>
+  </head>
+  
+  <body>
+      <h1>Books</h1>
+  
+      <table border="1" style="width:50%;border-collapse: collapse; ">
+          <tr>
+              <th>Book Name </th>
+              <th>Book Author </th>
+              <th>Book Price </th>
+          </tr>
+          <tr *ngFor="let b of books">
+              <td> {{ b.title }} </td>
+              <td> {{ b.author }} </td>
+              <td> {{ b.price }} </td>
+          </tr>
+      </table>
+
+      <app-gitcall></app-gitcall>
+  </body>
+  
+  </html>

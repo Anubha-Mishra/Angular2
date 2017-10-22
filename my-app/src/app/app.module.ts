@@ -19,12 +19,36 @@ import { UserlogComponent } from './userlog/userlog.component';
 import { LoginComponent } from './login/login.component';
 import { ReactiveComponent } from './login/reactive.component';
 import { CartComponent } from './cart/cart.component';
-import { StudentComponent } from './student/student.component';
+import { ListbooksComponent } from './listbooks/listbooks.component';
+
+import { HttpModule } from "@angular/http";
+
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/filter';
+import { GitcallComponent } from './listbooks/gitcall.component';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './routing/home.component';
+import { MainComponent } from './routing/main.component';
+import { AuthorsComponent } from './routing/authors.component';
+import { AuthorsDetailsComponent } from './routing/authors-details.component';
+import { NotFoundComponent } from './routing/not-found.component';
+
+const appRoutes : Routes = [
+  { path: 'home', component: HomeComponent },
+  { path: 'authors', component: AuthorsComponent },
+  { path: 'details/:id', component:  AuthorsDetailsComponent },
+  { path: '', component : HomeComponent},
+  { path: '**', component: NotFoundComponent}
+];
 
 @NgModule({
-  declarations: [ AppComponent,CourseComponent, Course1Component, Course3Component, SrinivasComponent, InterestComponent, AttrhighlightDirective, StrifoppositeDirective, UnlessDirective, PipesComponent, BracketsPipe, LifecycleComponent, UserlogComponent, LoginComponent, ReactiveComponent, CartComponent, StudentComponent ],
-  imports: [ BrowserModule,FormsModule,ReactiveFormsModule ],
+  declarations: [ AppComponent,CourseComponent, Course1Component, Course3Component, SrinivasComponent, 
+                  InterestComponent, AttrhighlightDirective, StrifoppositeDirective, UnlessDirective, 
+                  PipesComponent, BracketsPipe, LifecycleComponent, UserlogComponent, LoginComponent, 
+                  ReactiveComponent, CartComponent, ListbooksComponent, GitcallComponent, HomeComponent, 
+                  MainComponent, AuthorsComponent, AuthorsDetailsComponent, NotFoundComponent ],
+  imports: [ BrowserModule,FormsModule,ReactiveFormsModule,HttpModule,RouterModule.forRoot(appRoutes) ],
   providers: [],
-  bootstrap: [StudentComponent]
+  bootstrap: [MainComponent]
 })
 export class AppModule { }

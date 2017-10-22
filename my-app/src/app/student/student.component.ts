@@ -21,7 +21,7 @@ export class StudentComponent implements OnInit {
   }
 
   editStudent(id: number) {
-    console.log("Deleted");
+    console.log("Edited");
   }
 
   deleteStudent(id: number) {

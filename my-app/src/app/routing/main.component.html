@@ -1,0 +1,24 @@
+
+<html>
+  <style>
+    .bck{
+      background-color:#fff;
+      color:black;
+      padding:10px;
+      border:1px solid #ccc;
+    }
+  </style>
+  <body>
+    <h2>Authors Application</h2>
+    <div style="border:1px solid #ccc;background-color:#ccc;color:#fff;padding:6px;">
+      <a>BookAuthors</a>
+      <a routerLink="/home" routerLinkActive="active" class="bck">Home</a>
+      <a routerLink="/authors" routerLinkActive="active"  class="bck">Authors</a>
+    </div>
+    <p></p>
+    <router-outlet></router-outlet>
+  
+  
+  </body>
+  
+  </html>
