@@ -181,6 +181,9 @@ Service: ng g s log in userlog
 3. In component decorator use one more property as providers
 4. providers:[LogService]
 5. To communicate between service and component we use dependency injection: take LogService data to logService property.
+6. Service canbe done in two ways:
+	a. Promise --Single event
+	b. Observable --Multiple event
 ------------------------------------------------------------------------------------------------------------------------------
 
 Forms :
@@ -217,3 +220,4 @@ article
 article
 rbarticle
 -----------------------------------------------------------------------------------------------------------------------------------------
+rxjs --reactiveX Library Javascript
